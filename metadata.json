@@ -1,0 +1,6 @@
+{
+  "name": "Wha Hack",
+  "description": "WhatsApp Web desktop preview application created by devmessy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
