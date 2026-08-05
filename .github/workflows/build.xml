@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GitHub Actions Configuration Reference for Wha Hack APK Build -->
+<workflow name="Build Android APK">
+    <trigger>
+        <event>push</event>
+        <event>pull_request</event>
+        <event>workflow_dispatch</event>
+    </trigger>
+    <job id="build" name="Build Debug APK" os="ubuntu-latest">
+        <step name="Checkout" uses="actions/checkout@v4" />
+        <step name="Setup Java 17" uses="actions/setup-java@v4" java-version="17" distribution="temurin" />
+        <step name="Build APK" command="gradle assembleDebug" />
+        <step name="Upload Artifact" path="app/build/outputs/apk/debug/app-debug.apk" />
+    </job>
+</workflow>
